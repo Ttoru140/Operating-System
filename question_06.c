@@ -1,3 +1,8 @@
+// Write a C program to create a main process named ‘parent_process’ having 3
+// child processes without any grandchildren processes. Child Processes’
+// names are child_1, child_2, child_3. Trace the position in the process tree.
+
+
 #include<stdio.h>
 #include <signal.h>
 #include <sys/types.h>
