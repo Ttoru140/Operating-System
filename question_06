@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+
+
+int main()
+{
+    printf("parent pid:%d\n", getpid());
+
+    for(int i=0;i<3;i++){
+        pid_t  pid = fork();
+
+        if(pid<0){
+            perror("failed");
+            exit(1);
+        }
+  
+        if(pid ==0){
+        
+        printf("child pid: %d\n parent ppid:%d\n", getpid(), getppid());
+        sleep(10); // Optional: delay to observe in ps or top
+        exit(EXIT_SUCCESS);
+
+        }
+       
+    }
+    
+    
+    for(int i=0;i<3;i++){
+        wait(NULL);
+    }
+
+
+}
