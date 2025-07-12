@@ -1,3 +1,6 @@
+// Write a C program to show how two related processes can communicate with
+// each other by an unnamed pipe
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
