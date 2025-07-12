@@ -1,3 +1,6 @@
+// Write a C program to analyze the effect of local and global variables on a
+// parent process and a child process.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
